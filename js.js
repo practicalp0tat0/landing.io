@@ -16,6 +16,8 @@ function update5(){
       img.style.borderRadius=""+x1+"% "+  x2+"% " +x3+"% "+x4+"% "+"/"+x4+"% "+  x1+"% " +x2+"% "+x1+"% ";
 
 }
+img.style.borderColor="white"
+img.style.borderRightColor="white"
 img.style.borderLeftColor="white"
 img.style.borderTopColor="white"
 img.style.borderBottom="white"
