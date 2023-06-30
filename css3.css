@@ -1,0 +1,103 @@
+body{
+    background-color: darkolivegreen;
+    
+    background-image: url("https://picsum.photos/1080"); 
+   background-blend-mode:color-burn; /*  this will se the color u set and used up tob with all its diffrent options NOTE: there ais more htan one  */
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: ghostwhite;
+}
+
+table{
+    width: 30%;
+}
+ul{
+    padding: 0;
+
+    margin-left: 1%;
+    margin-top: 2%;
+}
+li{
+    list-style: none;
+    margin: 1%;
+    padding: 0;
+    font-weight: 600;
+    display: inline-block;
+    
+
+}
+img{
+    height: 200px;
+    border: 2px;
+    border-width: 600;
+    border-color: white;
+    border-style: solid;
+
+
+}
+.cont{
+    display: grid;
+    grid-template-columns: repeat(1,60px);
+    grid-template-rows: repeat(1,60px);
+
+}
+.logo{
+    display: grid;
+    grid-column-start:1 ;
+    grid-column-end:1 ;
+    grid-row-start:1 ;
+    grid-row-end:1 ;
+    margin-left: 30%;
+    margin-top: 2%;
+}
+/* header{display: grid;
+    grid-column-start:4 ;
+    grid-column-end:6 ;
+    grid-row-start:2 ;
+    grid-row-end:3 ;
+    padding: 0;
+    margin: 0;
+
+} */
+
+
+
+/* p{
+    /* text-align: start;
+    margin-left: 1%;
+    margin-top: 4%;
+
+    
+
+
+} */
+
+
+/* 
+.intro{
+    display: grid;
+    grid-template-columns: repeat(1,60px);
+    grid-template-rows: repeat(1,60px);
+    /* justify-items: center;
+    align-items: start; 
+    justify-items: start;
+    background-color: darkslategray;
+} 
+*/
+
+
+footer{
+    text-align: left;
+    color: white;
+    padding: 1%;
+    background-color: rgb(32, 69, 41);
+    height: 280px;
+    
+
+}
+
+h1{
+    padding: 0;
+}
