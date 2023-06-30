@@ -17,6 +17,9 @@ function update5(){
 
 }
 img.style.borderLeftColor="white"
+img.style.borderTopColor="white"
+img.style.borderBottom="white"
+
 img.style.borderRightColor="white"
 img.style.borderStyle="solid"
 img.style.borderBlockColor="white"
