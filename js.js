@@ -21,6 +21,33 @@ function update5(){
       img.style.transitionDuration="2s"
       img.style.borderRadius=""+x1+"% "+  x2+"% " +x3+"% "+x4+"% "+"/"+x4+"% "+  x1+"% " +x2+"% "+x1+"% ";
 
+
+      /*satrt of the color chaning of the Rainbow and the Noir functions */
+
+      // ---------- add this inside update5() ----------
+      // Get all elements with the classes (do this each time in case they change)
+      var rainbowEls = document.querySelectorAll('.Rainbow');
+      var noirEls = document.querySelectorAll('.Noir');
+
+      // --- Rainbow: step the hue forward each call ---
+      if (typeof rainbowHue === 'undefined') { rainbowHue = 0; } // ensure variable exists
+      rainbowHue = (rainbowHue + 30) % 360;  // jump by 30° every 900ms (approx 10s full cycle)
+      for (var i = 0; i < rainbowEls.length; i++) {
+        rainbowEls[i].style.color = 'hsl(' + rainbowHue + ', 100%, 50%)';
+      }
+
+      // --- Noir: move lightness back and forth ---
+      if (typeof noirLightness === 'undefined') { noirLightness = 0; noirDir = 1; }
+      noirLightness += noirDir * 5;  // step by 5% each call (0→100 in ~18s)
+      if (noirLightness >= 100) { noirLightness = 100; noirDir = -1; }
+      if (noirLightness <= 0)   { noirLightness = 0;   noirDir = 1; }
+      for (var j = 0; j < noirEls.length; j++) {
+        noirEls[j].style.color = 'hsl(0, 0%, ' + noirLightness + '%)';
+      }
+      
+      /*end of the color chaning of the Rainbow and the Noir functions */
+
+
 }
 img.style.borderColor="white"
 img.style.borderRightColor="white"
@@ -43,32 +70,4 @@ img.style.height="200px"
 
 
 
-/*satrt of the color chaning of the Rainbow and the Noir functions */
 
-// Wait a tiny moment for the HTML to exist, then start
-window.onload = function() {
-  // --- Rainbow effect ---
-  const rainbowEls = document.querySelectorAll('.Rainbow');
-  let hue = 0;
-  setInterval(() => {
-    for (let i = 0; i < rainbowEls.length; i++) {
-      rainbowEls[i].style.color = 'hsl(' + hue + ', 100%, 50%)';
-    }
-    hue = (hue + 1) % 360;
-  }, 30);
-
-  // --- Noir effect ---
-  const noirEls = document.querySelectorAll('.Noir');
-  let lightness = 0;
-  let direction = 1;
-  setInterval(() => {
-    for (let i = 0; i < noirEls.length; i++) {
-      noirEls[i].style.color = 'hsl(0, 0%, ' + lightness + '%)';
-    }
-    lightness += direction;
-    if (lightness >= 100) direction = -1;
-    if (lightness <= 0) direction = 1;
-  }, 30);
-};
-
-/*end of the color chaning of the Rainbow and the Noir functions */
