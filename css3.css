@@ -101,3 +101,7 @@ footer{
 h1{
     padding: 0;
 }
+
+.Rainbow, .Noir {
+  transition: color 0.9s linear;
+}
