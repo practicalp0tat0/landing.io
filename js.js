@@ -5,6 +5,44 @@ let x2=0;
 let x3=0;
 let x4=0;
 
+
+
+
+/*satrt of the color chaning of the Rainbow and the Noir functions */
+
+// Wait for the DOM to be fully loaded
+document.addEventListener('DOMContentLoaded', () => {
+  const rainbowElements = document.querySelectorAll('.Rainbow');
+  const noirElements = document.querySelectorAll('.Noir');
+
+  let startTime = null;
+
+  function animate(timestamp) {
+    if (!startTime) startTime = timestamp;
+    const elapsed = timestamp - startTime; // ms
+
+    // Rainbow: cycle hue from 0 to 360 over 5 seconds
+    const rainbowHue = (elapsed % 5000) / 5000 * 360;
+    const rainbowColor = `hsl(${rainbowHue}, 100%, 50%)`;
+    rainbowElements.forEach(el => (el.style.color = rainbowColor));
+
+    // Noir: lightness goes 0% → 100% → 0% over 4 seconds (triangle wave)
+    const noirCycle = (elapsed % 4000) / 4000;
+    const noirLightness = noirCycle <= 0.5
+      ? noirCycle * 2          // 0→1 in first half
+      : (1 - noirCycle) * 2;   // 1→0 in second half
+    const noirColor = `hsl(0, 0%, ${Math.round(noirLightness * 100)}%)`;
+    noirElements.forEach(el => (el.style.color = noirColor));
+
+    requestAnimationFrame(animate);
+  }
+
+  requestAnimationFrame(animate);
+});
+
+/*end of the color chaning of the Rainbow and the Noir functions */
+
+
 setInterval(update5,900)
 function update5(){
 
