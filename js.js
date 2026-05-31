@@ -20,6 +20,21 @@ function update5(){
       x4=Math.floor(Math.random()*(100-20)+20);
       img.style.transitionDuration="2s"
       img.style.borderRadius=""+x1+"% "+  x2+"% " +x3+"% "+x4+"% "+"/"+x4+"% "+  x1+"% " +x2+"% "+x1+"% ";
+
+
+      const rain = document.getElementsByClassName('Rainbow');
+
+// inside your update function:
+for (let i = 0; i < rain.length; i++) {
+  const r = Math.floor(Math.random() * 256);   // 0 – 255
+  const g = Math.floor(Math.random() * 256);
+  const b = Math.floor(Math.random() * 256);
+  rain[i].style.color = `rgb(${r}, ${g}, ${b})`;
+}
+
+
+
+      
 }
 
 
@@ -43,23 +58,15 @@ img.style.height="200px"
 
 
 
-// ===== SMOOTH RAINBOW FADE =====
-function startRainbowFade() {
-  const rainbowEls = document.querySelectorAll('.Rainbow');
-  if (rainbowEls.length === 0) return;
 
-  let hue = 0;
-  setInterval(() => {
-    // Increase hue by 1° every 30ms → smooth full rainbow cycle in ~10.8s
-    hue = (hue + 1) % 360;
-    const color = `hsl(${hue}, 100%, 50%)`;
-    rainbowEls.forEach(el => {
-      el.style.color = color;
-      // Optional: smooth CSS transition for extra butteriness
-      el.style.transition = 'color 0.03s linear';
-    });
-  }, 30);
-}
+
+
+
+
+
+
+
+
 
 // ===== SMOOTH NOIR FADE (BLACK ↔ WHITE) =====
 function startNoirFade() {
