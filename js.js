@@ -7,7 +7,7 @@ let x4=0;
 
 
 
-
+const rain = document.getElementsByClassName('Rainbow');
 
 
 
@@ -23,14 +23,14 @@ function update5(){
 
 
 
-      const rain = document.getElementsByClassName('Rainbow');
+      
 
       for (let i = 0; i < rain.length; i++) {
             const r = Math.floor(Math.random() * 256);   // 0 – 255
             const g = Math.floor(Math.random() * 256);
             const b = Math.floor(Math.random() * 256);
             rain[i].style.color = `rgb(${r}, ${g}, ${b})`;
-            rain{i}.style.fontWeight = '600'
+            rain{i}.style.fontWeight = '600';
             
 }
 
@@ -38,6 +38,11 @@ function update5(){
 
       
 }
+
+
+
+
+
 
 
 
@@ -70,24 +75,7 @@ img.style.height="200px"
 
 
 
-// ===== SMOOTH NOIR FADE (BLACK ↔ WHITE) =====
-function startNoirFade() {
-  const noirEls = document.querySelectorAll('.Noir');
-  if (noirEls.length === 0) return;
 
-  let lightness = 0;
-  let direction = 1; // 1 = getting lighter, -1 = getting darker
-  setInterval(() => {
-    lightness += direction * 0.3;  // tiny step
-    if (lightness >= 100) { lightness = 100; direction = -1; }
-    if (lightness <= 0)   { lightness = 0;   direction = 1; }
-    const color = `hsl(0, 0%, ${Math.round(lightness)}%)`;
-    noirEls.forEach(el => {
-      el.style.color = color;
-      el.style.transition = 'color 0.03s linear';
-    });
-  }, 30);
-}
 
 
 
