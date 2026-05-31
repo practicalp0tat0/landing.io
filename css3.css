@@ -103,7 +103,7 @@ h1{
 }
 
 .Rainbow{
- transition: color 0.5s linear; 
+ transition: color 1s linear; 
 }
 .Noir{
     /* this is left empty */
