@@ -1,0 +1,155 @@
+
+body{
+  background-color:darkgray;
+  color: black;
+  
+  
+  margin: 0px;
+  margin-left:10;
+  padding:0px;
+  
+  /*
+  width:100vw ;
+  height:100vw;
+  */
+  
+  height: auto;       
+    width: 100%;
+    zoom: 0.85;
+  
+  
+  line-height:25px;
+  
+  display:grid;
+  grid-template-rows: repeat(10%,10);
+  grid-template-columns:repeat(10%,10);;
+  
+  font-size:18px;
+  font-style:alias;
+  
+}
+
+h1{
+  margin-left:10px;
+}
+
+h3{
+  margin:0px;
+  padding:0px;
+  
+  margin-left:20px;
+  margin-top:10px ;
+  text-transform:bold;
+  font-weight:900;
+  font-size:20px;
+  
+  
+}
+
+
+hr{
+  color:blueviolet;
+  margin:0px;
+  padding:0px;
+  margin-top:10px;
+  
+  
+}
+
+
+header{
+  grid-area:1/1/1/11;
+  
+  
+  margin:0px;
+  padding:0px;
+  
+  display:flex;
+  justify-content:space-between;
+  flex-direction:column;
+  
+  
+}
+
+header ul{
+  
+  margin:0;
+  padding:0;
+ 
+  list-style: none;
+  display:flex;
+  flex-direction:row;
+  justify-content:space-around;
+  
+  
+  
+}
+
+
+header li::before {
+  
+  content: " | ";
+}
+header li::after {
+  
+  content: " | ";
+}
+
+
+.work{
+  grid-area:2/1/8/9;
+  
+}
+
+.work :not(h3) {
+  margin-left: 10px;
+}
+.edu{
+  grid-area:2/9/7/11;
+  
+  margin:0px;
+  padding:0px;
+  margin-right:10px;
+
+}
+
+,lang{
+  grid-area:7/9/9/11;
+}
+
+
+
+
+footer{
+  grid-area:8/1/10/11;
+  
+}
+
+footer ul{
+  display: grid;
+  grid-template-columns: repeat(6, auto);
+  
+  margin-left:10px;
+  
+  grid-auto-flow: row;
+  column-gap: 20px;
+}
+
+.info :not(hr){
+  
+  display:inline;
+  padding-left:5vw;
+  
+ 
+}
+
+
+
+
+.BeBoldv{
+  width:800;
+  
+}
+
+
+
