@@ -5,7 +5,6 @@ let x2=0;
 let x3=0;
 let x4=0;
 
-const rain = document.getElementsByClassName('Rainbow');
 
 
 
@@ -23,6 +22,8 @@ function update5(){
       img.style.borderRadius=""+x1+"% "+  x2+"% " +x3+"% "+x4+"% "+"/"+x4+"% "+  x1+"% " +x2+"% "+x1+"% ";
 
 
+
+      const rain = document.getElementsByClassName('Rainbow');
 
       for (let i = 0; i < rain.length; i++) {
             const r = Math.floor(Math.random() * 256);   // 0 – 255
