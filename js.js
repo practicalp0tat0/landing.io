@@ -5,6 +5,7 @@ let x2=0;
 let x3=0;
 let x4=0;
 
+const rain = document.getElementsByClassName('Rainbow');
 
 
 
@@ -22,14 +23,14 @@ function update5(){
       img.style.borderRadius=""+x1+"% "+  x2+"% " +x3+"% "+x4+"% "+"/"+x4+"% "+  x1+"% " +x2+"% "+x1+"% ";
 
 
-      const rain = document.getElementsByClassName('Rainbow');
 
-// inside your update function:
-for (let i = 0; i < rain.length; i++) {
-  const r = Math.floor(Math.random() * 256);   // 0 – 255
-  const g = Math.floor(Math.random() * 256);
-  const b = Math.floor(Math.random() * 256);
-  rain[i].style.color = `rgb(${r}, ${g}, ${b})`;
+      for (let i = 0; i < rain.length; i++) {
+            const r = Math.floor(Math.random() * 256);   // 0 – 255
+            const g = Math.floor(Math.random() * 256);
+            const b = Math.floor(Math.random() * 256);
+            rain[i].style.color = `rgb(${r}, ${g}, ${b})`;
+            rain{i}.style.fontWeight = '600'
+            
 }
 
 
