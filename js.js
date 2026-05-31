@@ -58,6 +58,7 @@ for (let i = 0; i < rain.length; i++) {
   const g = Math.floor(Math.random() * 256);
   const b = Math.floor(Math.random() * 256);
   rain[i].style.color = `rgb(${r}, ${g}, ${b})`;
+      rain[i].style.fontWeight = '600'
 }
 }
 
