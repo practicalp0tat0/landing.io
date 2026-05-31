@@ -102,6 +102,10 @@ h1{
     padding: 0;
 }
 
-.Rainbow,  {
+.Rainbow{
  transition: color 0.5s linear; 
+}
+.Noir{
+    /* this is left empty */
+    color:pink;
 }
