@@ -103,5 +103,5 @@ h1{
 }
 
 .Rainbow, .Noir {
-  /*empty for now !*/
+ transition: color 0.1s linear; 
 }
